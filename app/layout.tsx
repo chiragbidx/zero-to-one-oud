@@ -8,8 +8,8 @@ import ErrorReporter from "../components/ErrorReporter";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 
 export const metadata: Metadata = {
-  title: "Panda - SaaS App Builder Starter",
-  description: "Production-ready SaaS app builder starter template with modern UI, dark mode, and launch-ready sections.",
+  title: "PulseCRM – Modern CRM for Startups",
+  description: "PulseCRM is the production-ready internal CRM template with team features, automations, and beautiful modern UI for growing startups.",
 };
 
 export default function RootLayout({
