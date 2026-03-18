@@ -10,6 +10,8 @@ import {
   Settings,
   Users,
   CreditCard,
+  Columns2,
+  KanbanSquare,
 } from "lucide-react";
 import {
   Collapsible,
@@ -26,9 +28,11 @@ type NavItem = {
 
 const sections: { title: string; items: NavItem[] }[] = [
   {
-    title: "Platform",
+    title: "Workspace",
     items: [
       { label: "Overview", href: "/dashboard", icon: Home },
+      { label: "Deals", href: "#", icon: Columns2, disabled: true },
+      { label: "Pipelines", href: "#", icon: KanbanSquare, disabled: true },
       {
         label: "Feature",
         href: "/dashboard/feature",
