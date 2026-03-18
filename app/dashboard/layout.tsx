@@ -49,7 +49,7 @@ export default async function DashboardLayout({
                 P
               </div>
               {/* Dashboard Text Logo */}
-              <span className="font-semibold tracking-tight">Panda</span>
+              <span className="font-semibold tracking-tight">PulseCRM</span>
             </div>
           </div>
 
