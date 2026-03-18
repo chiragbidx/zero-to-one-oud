@@ -68,62 +68,62 @@ type MockProject = {
 };
 
 const metrics: Metric[] = [
-  { label: "Total Users", value: "2,847", trend: "+12.4%", icon: Users, description: "vs last month" },
-  { label: "Active Projects", value: "184", trend: "+6.1%", icon: FolderKanban, description: "vs last month" },
-  { label: "Revenue", value: "$48,290", trend: "+18.2%", icon: DollarSign, description: "vs last month" },
-  { label: "Growth Rate", value: "24.5%", trend: "+3.1%", icon: TrendingUp, description: "vs last month" },
+  { label: "Open Deals", value: "8", trend: "+2", icon: Users, description: "vs last week" },
+  { label: "Active Pipelines", value: "3", trend: "+1", icon: FolderKanban, description: "vs last week" },
+  { label: "Revenue", value: "$4,800", trend: "+$1,200", icon: DollarSign, description: "vs last month" },
+  { label: "Team Members", value: "5", trend: "+1", icon: TrendingUp, description: "vs last month" },
 ];
 
 const onboardingSteps: OnboardingStep[] = [
-  { title: "Complete your profile", description: "Add your name and contact details.", href: "/dashboard/settings", done: false },
-  { title: "Invite team members", description: "Collaborate by sending invitations.", href: "/dashboard/team", done: false },
-  { title: "Connect an integration", description: "Link external tools and services.", href: "#", done: false },
-  { title: "Set up billing", description: "Add a payment method for premium.", href: "#", done: false },
+  { title: "Complete your profile", description: "Add your name for personalization.", href: "/dashboard/settings", done: false },
+  { title: "Invite teammates", description: "Bring the team in for collaborative workflows.", href: "/dashboard/team", done: false },
+  { title: "Set up a pipeline", description: "Customize deals and pipeline stages.", href: "#", done: false },
+  { title: "Import contacts", description: "Bring your leads from existing data.", href: "#", done: false },
 ];
 
 const recentActivity: ActivityItem[] = [
-  { title: "New user signup", detail: "sarah@acme.dev created an account", time: "2 min ago", icon: Users },
-  { title: "Plan upgraded", detail: "starter@pulsehq.com moved to Pro", time: "28 min ago", icon: Zap },
-  { title: "Invoice paid", detail: "INV-2487 was paid — $299.00", time: "1 hr ago", icon: DollarSign },
-  { title: "Team invited", detail: "3 users invited to workspace", time: "3 hr ago", icon: Users },
-  { title: "Project created", detail: "New project 'Q2 Campaign'", time: "5 hr ago", icon: FolderKanban },
+  { title: "New deal created", detail: "Demo Co – $5,400", time: "3 min ago", icon: Users },
+  { title: "Contacted lead", detail: "lisa@acme.dev replied to your email", time: "28 min ago", icon: Zap },
+  { title: "Deal closed", detail: "Q3 Pilot was won – $4,800", time: "2 hr ago", icon: DollarSign },
+  { title: "Teammate joined", detail: "Rahul K was added to PulseCRM", time: "3 hr ago", icon: Users },
+  { title: "Pipeline updated", detail: "New column added to Demo Pipeline", time: "5 hr ago", icon: FolderKanban },
 ];
 
 const quickActions = [
-  { label: "Invite a member", href: "/dashboard/team", icon: Users },
-  { label: "Account settings", href: "/dashboard/settings", icon: Activity },
+  { label: "Invite to PulseCRM", href: "/dashboard/team", icon: Users },
+  { label: "Edit profile", href: "/dashboard/settings", icon: Activity },
   { label: "View activity", href: "#", icon: Bell },
 ];
 
 const weeklyData = [
-  { day: "Mon", users: 42, revenue: 320 },
-  { day: "Tue", users: 58, revenue: 480 },
-  { day: "Wed", users: 35, revenue: 290 },
-  { day: "Thu", users: 72, revenue: 610 },
-  { day: "Fri", users: 63, revenue: 520 },
-  { day: "Sat", users: 28, revenue: 180 },
-  { day: "Sun", users: 18, revenue: 140 },
+  { day: "Mon", users: 4, revenue: 320 },
+  { day: "Tue", users: 8, revenue: 480 },
+  { day: "Wed", users: 6, revenue: 290 },
+  { day: "Thu", users: 9, revenue: 610 },
+  { day: "Fri", users: 7, revenue: 520 },
+  { day: "Sat", users: 3, revenue: 180 },
+  { day: "Sun", users: 2, revenue: 140 },
 ];
 
 const monthlyRevenue = [
-  { month: "Jan", value: 12400 },
-  { month: "Feb", value: 15800 },
-  { month: "Mar", value: 14200 },
-  { month: "Apr", value: 18600 },
-  { month: "May", value: 22100 },
-  { month: "Jun", value: 19800 },
-  { month: "Jul", value: 24500 },
-  { month: "Aug", value: 28300 },
-  { month: "Sep", value: 26100 },
-  { month: "Oct", value: 31200 },
-  { month: "Nov", value: 35800 },
-  { month: "Dec", value: 48290 },
+  { month: "Jan", value: 2400 },
+  { month: "Feb", value: 3800 },
+  { month: "Mar", value: 4200 },
+  { month: "Apr", value: 5600 },
+  { month: "May", value: 7100 },
+  { month: "Jun", value: 9800 },
+  { month: "Jul", value: 10500 },
+  { month: "Aug", value: 12800 },
+  { month: "Sep", value: 11000 },
+  { month: "Oct", value: 16600 },
+  { month: "Nov", value: 19800 },
+  { month: "Dec", value: 24800 },
 ];
 
 const initialMockProjects: MockProject[] = [
-  { id: "p-1", name: "Landing Refresh", owner: "Ava", status: "Draft" },
-  { id: "p-2", name: "Onboarding Flow", owner: "Liam", status: "In Review" },
-  { id: "p-3", name: "Usage Dashboard", owner: "Noah", status: "Published" },
+  { id: "p-1", name: "Welcome Automation", owner: "Chirag", status: "Draft" },
+  { id: "p-2", name: "Startup Community Outreach", owner: "Team", status: "In Review" },
+  { id: "p-3", name: "CRM Launch Plan", owner: "Chirag", status: "Live" },
 ];
 
 function BarChart({ data }: { data: typeof weeklyData }) {
@@ -266,7 +266,6 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
 
   return (
     <>
-      {/* Welcome banner */}
       <div className="mb-8 space-y-4">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
@@ -274,7 +273,7 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
               {greeting}, {firstName}
             </h1>
             <p className="mt-1 text-sm text-muted-foreground">
-              Here&apos;s what&apos;s happening across your workspace today.
+              Welcome to PulseCRM—keep your deals, leads, and team organized!
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -302,7 +301,7 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
           <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
           <Input
             type="search"
-            placeholder="Search dashboard..."
+            placeholder="Search your CRM..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="pl-9 h-10 bg-muted/50 border-muted-foreground/15 focus-visible:border-border focus-visible:bg-background"
@@ -322,7 +321,6 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
         </Card>
       )}
 
-      {/* Metric cards */}
       {showMetrics && (
         <div className="mb-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {filteredMetrics.map((metric) => {
@@ -353,19 +351,18 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
         </div>
       )}
 
-      {/* Middle section */}
       {(showOnboarding || showCharts) && (
         <div className="mb-8 grid gap-6 lg:grid-cols-5">
           {showOnboarding && (
             <Card className="lg:col-span-2">
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-base">Getting Started</CardTitle>
+                  <CardTitle className="text-base">Get started with PulseCRM</CardTitle>
                   <Badge variant="outline" className="text-xs">
                     0 / {onboardingSteps.length}
                   </Badge>
                 </div>
-                <CardDescription>Complete these steps to set up your workspace.</CardDescription>
+                <CardDescription>Personalize your internal CRM with these quick steps.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-1">
                 {filteredSteps.map((step) => (
@@ -396,10 +393,10 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
                 <div className="flex items-center justify-between">
                   <div>
                     <CardTitle className="text-base">Weekly Signups</CardTitle>
-                    <CardDescription>New user registrations this week</CardDescription>
+                    <CardDescription>Track new contacts and deals</CardDescription>
                   </div>
                   <Badge variant="outline" className="text-xs font-medium">
-                    316 total
+                    24 this week
                   </Badge>
                 </div>
               </CardHeader>
@@ -411,7 +408,6 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
         </div>
       )}
 
-      {/* Revenue chart */}
       {showCharts && (
         <div className="mb-8">
           <Card>
@@ -419,11 +415,11 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
               <div className="flex items-center justify-between">
                 <div>
                   <CardTitle className="text-base">Revenue Overview</CardTitle>
-                  <CardDescription>Monthly revenue for the current year</CardDescription>
+                  <CardDescription>Monthly closed deal totals</CardDescription>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-bold tracking-tight">$48,290</p>
-                  <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">+18.2% from last month</p>
+                  <p className="text-lg font-bold tracking-tight">$4,800</p>
+                  <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">+25% from last month</p>
                 </div>
               </div>
             </CardHeader>
@@ -440,9 +436,9 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
             <CardHeader>
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <CardTitle className="text-base">Projects</CardTitle>
+                  <CardTitle className="text-base">Demo Projects</CardTitle>
                   <CardDescription>
-                    Create and update your projects
+                    This section is for UI demonstration. Use the sidebar for PulseCRM features.
                   </CardDescription>
                 </div>
                 <Button size="sm" onClick={openCreateDialog}>
@@ -483,7 +479,7 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
                   {editingProject ? "Edit project" : "Create project"}
                 </DialogTitle>
                 <DialogDescription>
-                  This is mock data in local component state. No backend call is made.
+                  Demo data for PulseCRM UI. Use your sidebar to navigate features.
                 </DialogDescription>
               </DialogHeader>
 
@@ -494,7 +490,7 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
                     id="project-name"
                     name="name"
                     defaultValue={editingProject?.name ?? ""}
-                    placeholder="Q2 Campaign"
+                    placeholder="CRM Launch"
                     required
                   />
                 </div>
@@ -504,7 +500,7 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
                     id="project-owner"
                     name="owner"
                     defaultValue={editingProject?.owner ?? ""}
-                    placeholder="Ava"
+                    placeholder="Chirag"
                     required
                   />
                 </div>
@@ -533,14 +529,13 @@ export function DashboardContent({ greeting, firstName }: { greeting: string; fi
         </div>
       )}
 
-      {/* Activity feed */}
       {showActivity && (
         <Card>
           <CardHeader>
             <div className="flex items-center justify-between">
               <div>
                 <CardTitle className="text-base">Recent Activity</CardTitle>
-                <CardDescription>Latest events across your workspace</CardDescription>
+                <CardDescription>See what’s new in your CRM</CardDescription>
               </div>
               <Button variant="ghost" size="sm" className="gap-1.5 text-xs" disabled>
                 View all
